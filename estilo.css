@@ -46,6 +46,9 @@ svg{
 .justify-content-start{
     justify-content: start;
 }
+.justify-content-end{
+    justify-content: end;
+}
 .align-items-center{
     align-items: center;
 }
@@ -93,6 +96,9 @@ svg{
 }
 .w-100{
     width: 100%;
+}
+.d-m-1 div{
+    margin: 1em;
 }
 .option-access{
     padding: 10px 10px 10px 10px;
@@ -179,7 +185,7 @@ nav .search-icon i {
     width: fit-content;
 }
 .nav-right li a{
-    font-size: 20px;
+    font-size: 1em;
 }
 nav ul{
     display: flex;
@@ -192,6 +198,7 @@ nav ul{
 }
 .banner{
     background-color: var(--dark);
+    padding:4em 0 5em;
 }
 .py-1{
     padding: .5em 0 .5em;
@@ -200,6 +207,12 @@ nav ul{
     padding-top: 5%;
     padding-bottom: 5%;
 }
+.pt-2{
+    padding-top: 5%;
+}
+.mb-4{
+    margin-bottom: 4em;
+}
 .main-color{
     color: var(--main);
 }
@@ -207,7 +220,7 @@ nav ul{
     font-size: 1.9em;
 }
 h1{
-    font-size: 3.8em;
+    font-size: 3em;
     margin: 10px 0 10px 0;
     font-family: extra;
 }
@@ -250,39 +263,55 @@ section h1, section div{
 }
 section{
     padding: 4em 0 4em;
-}
-.card{
-    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+}.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .card {
+    width: calc(25% - 10px);
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 10px 20px 10px;
-    margin: 20px 0 20px;
-}
-.card .icon-card{
-    width: 20%;
-}
-.card .info-card{
-    width: 70%;
-}
-.card h3{
-    color: var(--dark);
-    padding: 5px 0 5px;
-}
-.card p{
-    color: var(--dark);
-}
-.info-card p{
-    overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /* number of lines to show */
-  -webkit-box-orient: vertical;
-}
-.card svg, .card path{
-    fill: var(--dark) !important;
-}
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    background-color: #F3F3F3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+  
+  .icon i {
+    font-size: 24px;
+    color: #7F7F7F;
+  }
+  
+  .content {
+    width: calc(100% - 70px);
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .card {
+      width: calc(50% - 10px);
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .card {
+      width: 100%;
+    }
+  }
+  
 .relative{
     position: relative;
 }
@@ -337,4 +366,118 @@ a.action-notice{
 .dark-section h2{
     font-family: main;
     font-weight: normal;
+}
+.box {
+    width: fit-content;
+    margin: 1% 20px 1%;
+}
+.p-1{
+    padding: 1em;
+}
+.rsp-access{
+    display: none;
+}
+.col-45{
+    width: 45%;
+}
+.col-60{
+    width: 60%;
+}
+.col-40{
+    width: 40%;
+}
+.menu-nav{
+    display: none;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+}
+.menu-nav svg{
+    fill: var(--dark);
+}
+.employee-card{
+    width: 30%;
+    margin-right: 10px;
+}
+.card:hover{
+    background-color: var(--dark);
+    cursor: pointer;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+a:hover,.option-access:hover,.nav-left:hover,button:hover{
+    cursor: pointer;
+}
+.card:hover h3,.card:hover p{
+    color: var(--main);
+}
+.card:hover svg,.card:hover path{
+    fill:var(--main);
+}
+@media screen and (max-width: 1100px) {
+    .col-md-25{
+        width: 30%;
+        margin-left: 0px;
+    }
+    
+    .employee-card{
+        width: 40%;       
+    }
+    .col-md-100{
+        width: 100%;
+    }
+    .col-md-hide{
+        display: none;
+    }
+    .menu-nav{
+        display: flex;
+    }
+    .rsp-access{
+        display: flex;
+    }
+    .left-acces,.right-acces{
+        display: none;
+    }
+    .accesibility{
+        justify-content: end;
+    }
+    .nav-right{
+        display: none;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    .sub-title {
+        font-size: 1em;
+    }
+    .col-md-30{
+        width: 30% !important;
+    }
+    .main-rectangle{
+        height: 100px;
+    }
+    .col-md-60{
+        width: 60% !important;
+    }
+    button.main-btn{
+        padding: 15px 40px 15px 40px;
+    }
+    .box {
+        width: fit-content;
+    }
+}
+@media screen and (max-width:800px) {
+    .box {
+        width: 40%;
+        margin-left: 1%;
+    }
+}
+@media screen and (max-width:500px) {
+    .box {
+        width: 100%;
+        margin: 0;
+    }
+    .employee-card{
+        width: 100%;
+        margin: 0;
+    }
 }

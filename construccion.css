@@ -1,5 +1,5 @@
 
-*,:after,:before{box-sizing:border-box}
+.machine-container div,:after,:before{box-sizing:border-box}
 .pull-left{float:left}
 .pull-right{float:right}
 .clearfix:after,.clearfix:before{content:'';display:table}
