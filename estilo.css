@@ -263,55 +263,39 @@ section h1, section div{
 }
 section{
     padding: 4em 0 4em;
-}.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .card {
-    width: calc(25% - 10px);
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card{
+    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
     border-radius: 10px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    padding: 20px;
-  }
-  
-  .icon {
-    width: 50px;
-    height: 50px;
-    background-color: #F3F3F3;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
-  }
-  
-  .icon i {
-    font-size: 24px;
-    color: #7F7F7F;
-  }
-  
-  .content {
-    width: calc(100% - 70px);
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .card {
-      width: calc(50% - 10px);
-    }
-  }
-  
-  @media only screen and (max-width: 576px) {
-    .card {
-      width: 100%;
-    }
-  }
-  
+    padding: 20px 10px 20px 10px;
+    margin: 20px 0 20px;
+}
+.card .icon-card{
+    width: 20%;
+}
+.card .info-card{
+    width: 70%;
+}
+.card h3{
+    color: var(--dark);
+    padding: 5px 0 5px;
+}
+.card p{
+    color: var(--dark);
+}
+.info-card p{
+    overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+.card svg, .card path{
+    fill: var(--dark);
+}
 .relative{
     position: relative;
 }
